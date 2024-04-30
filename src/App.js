@@ -1,8 +1,9 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+// eslint-disable-next-line import/no-extraneous-dependencies
+import { Scrollbar } from 'smooth-scrollbar-react';
 import Footer from './components/Footer';
 import NavMenu from './components/NavMenu';
-import SmoothScroll from './components/SmoothScroll';
 import About from './pages/About';
 import Contact from './pages/Contact';
 import Home from './pages/Home';
@@ -14,7 +15,13 @@ export default function App() {
     <>
       <Router>
         <NavMenu />
-        <SmoothScroll>
+        <Scrollbar
+          plugins={{
+            overscroll: {
+              effect: 'glow',
+            },
+          }}
+        >
           <Switch>
             <Route path="/about">
               <About />
@@ -31,7 +38,7 @@ export default function App() {
             </Route>
           </Switch>
           <Footer />
-        </SmoothScroll>
+        </Scrollbar>
       </Router>
     </>
   );
