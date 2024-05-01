@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import Button from './Button';
 import PText from './PText';
 import SectionTitle from './SectionTitle';
-import AboutImg from '../assets/images/profile_pic_circle.png';
+import AboutImg from '../assets/images/portrait_sketch.png';
 import Resume from '../assets/reports/Ian_Quan_Resume.pdf';
 
 const AboutSectionStyles = styled.div`

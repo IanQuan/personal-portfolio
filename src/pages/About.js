@@ -4,8 +4,7 @@ import styled from 'styled-components';
 import { motion } from 'framer-motion';
 import PText from '../components/PText';
 import Button from '../components/Button';
-import AboutImg from '../assets/images/profile_pic_circle.png';
-import AboutInfoItem from '../components/AboutInfoItem';
+import AboutImg from '../assets/images/portrait_sketch.png';
 import ContactBanner from '../components/ContactBanner';
 import Resume from '../assets/reports/Ian_Quan_Resume.pdf';
 import SkillsSection from '../components/SkillsSection';
@@ -37,6 +36,7 @@ const AboutPageStyles = styled.div`
     align-items: center;
     justify-content: center;
     gap: 2rem;
+    position: relative; // Make sure the parent is positioned relative
   }
   .left {
     flex: 3;
@@ -64,9 +64,8 @@ const AboutPageStyles = styled.div`
     }
   }
   .right {
-    img {
-      // border: 2px solid var(--gray-1);
-    }
+    flex: 2;
+    position: relative;
   }
   .about__info__items {
     margin-top: 15rem;
@@ -191,9 +190,9 @@ export default function About() {
               <h2 className="about__heading">A software engineer</h2>
               <div className="about__info">
                 <PText>
-                  Hello! I'm Ian Quan, a third-year undergraduate at the
-                  University of Toronto, pursuing a double major in Computer
-                  Science and Statistics.
+                  Hello! I'm Ian, a third-year undergraduate at the University
+                  of Toronto, pursuing a double major in Computer Science and
+                  Statistics.
                   <br /> <br />
                   With a strong foundation in Data analysis and software
                   engineering, I bring over 2 years of hands-on experience as a
@@ -212,17 +211,6 @@ export default function About() {
             </div>
             <div className="right">
               <img src={AboutImg} alt="me" />
-            </div>
-          </div>
-          <div className="about__info__items">
-            <div className="about__info__item">
-              <h1 className="about__info__heading">Education</h1>
-
-              <AboutInfoItem title="School" items={['University of Toronto']} />
-              <AboutInfoItem
-                title="Degree"
-                items={['B.Sc.(Hons) Computer Science and Statistics']}
-              />
             </div>
           </div>
           <SkillsSection skills={skillSets} />

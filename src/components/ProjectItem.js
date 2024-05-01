@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 const ProjectItemStyles = styled.div`
@@ -12,6 +11,9 @@ const ProjectItemStyles = styled.div`
     border: 3px solid var(--gray-2);
     img {
       height: 100%;
+      width: 100%;
+      object-fit: cover;
+      transition: transform 0.7s ease;
     }
   }
   .projectItem__info {
@@ -19,6 +21,16 @@ const ProjectItemStyles = styled.div`
     background-color: var(--deep-dark);
     padding: 1rem;
     border-radius: 12px;
+    transition: transform 0.7s ease;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.5);
+  }
+  &:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.5);
+
+    .projectItem__img img {
+      transform: scale(1.1);
+    }
   }
   .projectItem__title {
     font-size: 2.2rem;
@@ -42,13 +54,11 @@ export default function ProjectItem({
 }) {
   return (
     <ProjectItemStyles>
-      <Link to="/projects" className="projectItem__img">
+      <div className="projectItem__img">
         <img src={img} alt="project img" />
-      </Link>
+      </div>
       <div className="projectItem__info">
-        <Link to="#">
-          <h3 className="projectItem__title">{title}</h3>
-        </Link>
+        <h3 className="projectItem__title">{title}</h3>
         <p className="projectItem__desc">{desc}</p>
       </div>
     </ProjectItemStyles>

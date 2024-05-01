@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, useHistory } from 'react-router-dom';
 import styled from 'styled-components';
+// eslint-disable-next-line import/no-extraneous-dependencies
 import { motion } from 'framer-motion';
 import ProjectsInfo from '../assets/data/projects';
 import Button from '../components/Button';
@@ -8,7 +9,7 @@ import PText from '../components/PText';
 import SectionTitle from '../components/SectionTitle';
 import TechStack from '../components/TechStack';
 import ArrowNavigation from '../components/ArrowNavigation';
-// eslint-disable-next-line import/no-extraneous-dependencies
+
 const ProjectStyle = styled.div`
   padding: 10rem 0;
   .container {

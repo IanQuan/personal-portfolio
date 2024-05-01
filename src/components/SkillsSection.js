@@ -38,10 +38,10 @@ const SkillsSectionStyles = styled.div`
 
     .skills-title {
       font-size: 3rem;
-      margin-bottom: 2rem;
       color: var(--gray-1);
       text-align: center;
       width: 100%;
+      margin-top: 1rem;
     }
 
     .tech-stack {
@@ -49,6 +49,7 @@ const SkillsSectionStyles = styled.div`
       flex-wrap: wrap;
       justify-content: center;
       gap: 10px;
+      margin-bottom: 1.5rem;
     }
 
     .tech-icon-wrapper {
