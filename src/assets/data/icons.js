@@ -7,14 +7,19 @@ export const skills = [
           'https://camo.githubusercontent.com/c205ecbe12500177d102169d97bc1c17c545155fdf5ec78c08d54ac53e5b38c1/68747470733a2f2f63646e2e776f726c64766563746f726c6f676f2e636f6d2f6c6f676f732f61646f62652d78642e737667',
       },
       {
-        name: 'Android Studio',
+        name: 'AWS',
         image:
-          'https://developer.android.com/static/studio/images/new-studio-logo-1_1920.png',
+          'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-plain-wordmark.svg',
       },
       {
         name: 'Bootstrap',
         image:
-          'https://getbootstrap.com/docs/5.3/assets/brand/bootstrap-logo-shadow.png',
+          'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bootstrap/bootstrap-original.svg',
+      },
+      {
+        name: 'Bash',
+        image:
+          'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bash/bash-original.svg',
       },
       {
         name: 'C',
@@ -28,7 +33,8 @@ export const skills = [
       },
       {
         name: 'Django',
-        image: 'https://img.icons8.com/color/48/django.png',
+        image:
+          'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/django/django-plain.svg',
       },
       {
         name: 'Docker',
@@ -47,7 +53,8 @@ export const skills = [
       },
       {
         name: 'Firebase',
-        image: 'https://www.vectorlogo.zone/logos/firebase/firebase-icon.svg',
+        image:
+          'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/firebase/firebase-original.svg',
       },
       {
         name: 'Flask',
@@ -149,7 +156,7 @@ export const skills = [
       {
         name: 'Netlify',
         image:
-          'https://seeklogo.com/images/N/netlify-logo-BD8F8A77E2-seeklogo.com.png',
+          'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/netlify/netlify-original.svg',
       },
       {
         name: 'Next.js',
@@ -198,7 +205,8 @@ export const skills = [
       },
       {
         name: 'PyTorch',
-        image: 'https://img.icons8.com/fluency/48/pytorch.png',
+        image:
+          'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/pytorch/pytorch-original.svg',
       },
       {
         name: 'R',
@@ -227,11 +235,13 @@ export const skills = [
       },
       {
         name: 'Sqlite',
-        image: 'https://img.icons8.com/ios/50/sqlite.png',
+        image:
+          'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sqlite/sqlite-original.svg',
       },
       {
         name: 'Tensorflow',
-        image: 'https://img.icons8.com/color/48/tensorflow.png',
+        image:
+          'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tensorflow/tensorflow-original.svg',
       },
       {
         name: 'Tailwindcss',
@@ -246,7 +256,7 @@ export const skills = [
       {
         name: 'VS Code',
         image:
-          'https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Visual_Studio_Code_1.35_icon.svg/512px-Visual_Studio_Code_1.35_icon.svg.png?20210804221519',
+          'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vscode/vscode-original.svg',
       },
       {
         name: 'XML',

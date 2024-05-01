@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { Link } from 'react-router-dom';
 import SwiperCore, { Navigation } from 'swiper';
 import ProjectItem from './ProjectItem';
 import SectionTitle from './SectionTitle';
@@ -86,11 +87,16 @@ export default function ProjectsSection() {
               if (index >= 5) return;
               return (
                 <SwiperSlide key={project.id}>
-                  <ProjectItem
-                    title={project.name}
-                    img={project.img}
-                    desc={project.desc}
-                  />
+                  <Link
+                    to={`/projects/${encodeURIComponent(project.name)}`}
+                    key={project.id}
+                  >
+                    <ProjectItem
+                      title={project.name}
+                      img={project.img}
+                      desc={project.desc}
+                    />
+                  </Link>
                 </SwiperSlide>
               );
             })}

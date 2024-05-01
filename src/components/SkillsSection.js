@@ -59,7 +59,7 @@ const SkillsSectionStyles = styled.div`
       .tech-icon {
         width: 40px;
         height: 40px;
-        margin-bottom: 5px;
+        margin-bottom: 15px;
       }
       .tech-name {
         font-size: 1.5rem;

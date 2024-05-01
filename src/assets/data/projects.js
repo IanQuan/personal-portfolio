@@ -132,7 +132,7 @@ const projects = [
   {
     id: uuidv4(),
     name: 'A11y Lab Simulation',
-    desc: 'A testing platform, designed for software developers and accessibility testers, that enables users to simulate Web Content Accessibility Guidelines (WCAG) violations',
+    desc: 'A testing platform, designed for software developers and accessibility testers, that enables users to simulate WCAG violations',
     img: a11ylabImg,
     detail_title: 'Main Features',
     other_link: '',
@@ -195,7 +195,7 @@ const projects = [
   {
     id: uuidv4(),
     name: 'Road Segmention with U-Net',
-    desc: 'Using this app you can track any e coin. Also you will get a good advise about investment form the professional',
+    desc: 'This project developed a road segmentation model using the U-Net architecture for autonomous driving applications',
     img: RoadImg,
     github: 'https://github.com/IanQuan/Road-Segmentation-with-U-Net',
     other_link: ['Report', RoadReport],

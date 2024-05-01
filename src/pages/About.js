@@ -162,14 +162,17 @@ export default function About() {
     {
       title: 'Others',
       techStack: findTechIcons([
+        'Java',
+        'C',
         'Git',
         'Docker',
         'Figma',
         'Linux',
-        'Java',
-        'C',
         'Jira',
         'Latex',
+        'Netlify',
+        'AWS',
+        'Puppeteer',
       ]),
     },
   ];

@@ -32,8 +32,8 @@ const HeroStyles = styled.div`
       overflow: hidden; /* Ensures the text is clipped */
       white-space: nowrap; /* Keeps the text on a single line */
       width: 0;
-      animation: typing 3.5s steps(40, end) forwards,
-        blink-caret 0.75s step-end infinite;
+      animation: typing 3.5s steps(40, end) forwards 0.5s,
+        blink-caret 0.75s step-end infinite 0.5s;
     }
   }
   @keyframes typing {
