@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 // eslint-disable-next-line import/no-extraneous-dependencies
+import { AnimatePresence } from 'framer-motion';
 import { Scrollbar } from 'smooth-scrollbar-react';
 import Footer from './components/Footer';
 import NavMenu from './components/NavMenu';
@@ -23,21 +24,23 @@ export default function App() {
           }}
           damping={0.1}
         >
-          <Switch>
-            <Route path="/about">
-              <About />
-            </Route>
-            <Route path="/contact">
-              <Contact />
-            </Route>
-            <Route path="/projects/:projectName" component={ProjectDetail} />
-            <Route path="/projects">
-              <Projects />
-            </Route>
-            <Route path="/">
-              <Home />
-            </Route>
-          </Switch>
+          <AnimatePresence mode="wait">
+            <Switch>
+              <Route path="/about">
+                <About />
+              </Route>
+              <Route path="/contact">
+                <Contact />
+              </Route>
+              <Route path="/projects/:projectName" component={ProjectDetail} />
+              <Route path="/projects">
+                <Projects />
+              </Route>
+              <Route exact path="/">
+                <Home />
+              </Route>
+            </Switch>
+          </AnimatePresence>
           <Footer />
         </Scrollbar>
       </Router>

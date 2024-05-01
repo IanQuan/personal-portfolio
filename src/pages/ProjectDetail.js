@@ -1,13 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, useHistory } from 'react-router-dom';
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
 import ProjectsInfo from '../assets/data/projects';
 import Button from '../components/Button';
 import PText from '../components/PText';
 import SectionTitle from '../components/SectionTitle';
 import TechStack from '../components/TechStack';
 import ArrowNavigation from '../components/ArrowNavigation';
-
+// eslint-disable-next-line import/no-extraneous-dependencies
 const ProjectStyle = styled.div`
   padding: 10rem 0;
   .container {
@@ -143,6 +144,23 @@ const ProjectStyle = styled.div`
     }
   }
 `;
+const pageTransition = {
+  initial: {
+    opacity: 0,
+  },
+  animate: {
+    opacity: 1,
+    transition: {
+      duration: 0.5,
+    },
+  },
+  exit: {
+    opacity: 0,
+    transition: {
+      duration: 0.5,
+    },
+  },
+};
 
 export default function ProjectDetail() {
   const { projectName } = useParams();
@@ -181,7 +199,12 @@ export default function ProjectDetail() {
   }
 
   return (
-    <>
+    <motion.div
+      initial="initial"
+      animate="animate"
+      exit="exit"
+      variants={pageTransition}
+    >
       <ProjectStyle>
         <div className="container">
           <div className="projectDetailSection__left">
@@ -234,6 +257,6 @@ export default function ProjectDetail() {
           <ArrowNavigation onPrev={handlePrev} onNext={handleNext} />
         </div>
       </ProjectStyle>
-    </>
+    </motion.div>
   );
 }

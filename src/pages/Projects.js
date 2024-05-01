@@ -1,9 +1,29 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
+// eslint-disable-next-line import/no-extraneous-dependencies
+import { motion } from 'framer-motion';
 import SectionTitle from '../components/SectionTitle';
 import ProjectsInfo from '../assets/data/projects';
 import ProjectItem from '../components/ProjectItem';
+
+const pageTransition = {
+  initial: {
+    opacity: 0,
+  },
+  animate: {
+    opacity: 1,
+    transition: {
+      duration: 0.5,
+    },
+  },
+  exit: {
+    opacity: 0,
+    transition: {
+      duration: 0.5,
+    },
+  },
+};
 
 const ProjectStyle = styled.div`
   padding: 10rem 0;
@@ -19,7 +39,12 @@ export default function Projects() {
   const [projectsData] = useState(ProjectsInfo);
 
   return (
-    <>
+    <motion.div
+      initial="initial"
+      animate="animate"
+      exit="exit"
+      variants={pageTransition}
+    >
       <ProjectStyle>
         <div className="container">
           <SectionTitle
@@ -43,6 +68,6 @@ export default function Projects() {
           </div>
         </div>
       </ProjectStyle>
-    </>
+    </motion.div>
   );
 }

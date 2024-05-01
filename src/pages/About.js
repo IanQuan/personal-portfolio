@@ -1,5 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
+// eslint-disable-next-line import/no-extraneous-dependencies
+import { motion } from 'framer-motion';
 import PText from '../components/PText';
 import Button from '../components/Button';
 import AboutImg from '../assets/images/profile_pic_circle.png';
@@ -8,6 +10,24 @@ import ContactBanner from '../components/ContactBanner';
 import Resume from '../assets/reports/Ian_Quan_Resume.pdf';
 import SkillsSection from '../components/SkillsSection';
 import { skills as allSkills } from '../assets/data/icons'; // Assuming this is the correct path to your icon data
+
+const pageTransition = {
+  initial: {
+    opacity: 0,
+  },
+  animate: {
+    opacity: 1,
+    transition: {
+      duration: 0.5,
+    },
+  },
+  exit: {
+    opacity: 0,
+    transition: {
+      duration: 0.5,
+    },
+  },
+};
 
 const AboutPageStyles = styled.div`
   padding: 20rem 0 10rem 0;
@@ -155,7 +175,12 @@ export default function About() {
     },
   ];
   return (
-    <>
+    <motion.div
+      initial="initial"
+      animate="animate"
+      exit="exit"
+      variants={pageTransition}
+    >
       <AboutPageStyles>
         <div className="container">
           <div className="top-section">
@@ -204,6 +229,6 @@ export default function About() {
         </div>
         <ContactBanner />
       </AboutPageStyles>
-    </>
+    </motion.div>
   );
 }
