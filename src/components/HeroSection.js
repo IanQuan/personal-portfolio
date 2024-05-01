@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { BsInstagram, BsLinkedin, BsGithub } from 'react-icons/bs';
-import HeroImg from '../assets/images/cn_tower_grey.webp';
+import HeroImg from '../assets/images/cn_tower.jpg';
 import SocialMediaArrow from '../assets/images/social-media-arrow.svg';
 import ScrollDownArrow from '../assets/images/scroll-down-arrow.svg';
 import PText from './PText';

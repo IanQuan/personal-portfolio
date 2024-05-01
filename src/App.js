@@ -21,6 +21,7 @@ export default function App() {
               effect: 'glow',
             },
           }}
+          damping={0.1}
         >
           <Switch>
             <Route path="/about">

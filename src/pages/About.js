@@ -6,6 +6,8 @@ import AboutImg from '../assets/images/profile_pic_circle.png';
 import AboutInfoItem from '../components/AboutInfoItem';
 import ContactBanner from '../components/ContactBanner';
 import Resume from '../assets/reports/Ian_Quan_Resume.pdf';
+import SkillsSection from '../components/SkillsSection';
+import { skills as allSkills } from '../assets/data/icons'; // Assuming this is the correct path to your icon data
 
 const AboutPageStyles = styled.div`
   padding: 20rem 0 10rem 0;
@@ -74,7 +76,84 @@ const AboutPageStyles = styled.div`
   }
 `;
 
+const findTechIcons = (techNames) =>
+  techNames.map((techName) => {
+    const techData = allSkills[0].skills.find(
+      (s) => s.name.toLowerCase() === techName.toLowerCase()
+    );
+    return techData || { name: techName, image: 'default-icon-path' }; // Provide a default icon if none found
+  });
 export default function About() {
+  const skillSets = [
+    {
+      title: 'FrontEnd',
+      techStack: findTechIcons([
+        'HTML',
+        'CSS',
+        'JavaScript',
+        'TypeScript',
+        'React.js',
+        'Bootstrap',
+        'Redux',
+        'Material UI',
+        'Next.js',
+        'Tailwindcss',
+      ]),
+    },
+    {
+      title: 'BackEnd',
+      techStack: findTechIcons([
+        'Node.js',
+        'Django',
+        'Firebase',
+        'Flask',
+        'MySQL',
+        'Postgresql',
+        'MongoDB',
+        'Sqlite',
+        'Postman',
+      ]),
+    },
+    {
+      title: 'AI/ML',
+      techStack: findTechIcons([
+        'Python',
+        'TensorFlow',
+        'Scikitlearn',
+        'Keras',
+        'OpenCV',
+        'PyTorch',
+        'Jupyter',
+        'Google Colab',
+        'Hugging Face',
+      ]),
+    },
+    {
+      title: 'Data Analysis',
+      techStack: findTechIcons([
+        'R',
+        'Matplotlib',
+        'Pandas',
+        'NumPy',
+        'Excel',
+        'Selenium',
+        'Kaggle',
+      ]),
+    },
+    {
+      title: 'Others',
+      techStack: findTechIcons([
+        'Git',
+        'Docker',
+        'Figma',
+        'Linux',
+        'Java',
+        'C',
+        'Jira',
+        'Latex',
+      ]),
+    },
+  ];
   return (
     <>
       <AboutPageStyles>
@@ -120,79 +199,8 @@ export default function About() {
                 items={['B.Sc.(Hons) Computer Science and Statistics']}
               />
             </div>
-            <div className="about__info__item">
-              <h1 className="about__info__heading">My Skills</h1>
-
-              <AboutInfoItem
-                title="FrontEnd"
-                items={[
-                  'HTML',
-                  'CSS',
-                  'JavaScript',
-                  'React.js',
-                  'Bootstrap',
-                  'Java Swing',
-                ]}
-              />
-              <AboutInfoItem
-                title="BackEnd"
-                items={[
-                  'C',
-                  'Node.js',
-                  'REST API',
-                  'Django',
-                  'Firebase',
-                  'Flask',
-                  'MongoDB',
-                  'PostgreSQL',
-                  'SQLite',
-                ]}
-              />
-              <AboutInfoItem
-                title="AI/ML"
-                items={[
-                  'Python',
-                  'R',
-                  'OpenCV',
-                  'Matplotlib',
-                  'Pandas',
-                  'PyTorch',
-                  'Scikit-learn',
-                  'TensorFlow',
-                ]}
-              />
-              <AboutInfoItem
-                title="Languages"
-                items={['English', 'Cantonese', 'Mandarin']}
-              />
-            </div>
-            <div className="about__info__item">
-              <h1 className="about__info__heading">Experiences</h1>
-
-              <AboutInfoItem
-                title="Mar 2024"
-                items={[
-                  'Full Stack Web Developer',
-                  '@ Global Health Core Inc.',
-                ]}
-              />
-              <AboutInfoItem
-                title="2023 - 2024"
-                items={['Data Analyst', '@ University of Toronto']}
-              />
-              <AboutInfoItem
-                title="Jan-Apr 2024"
-                items={[
-                  'Full Stack Software Developer',
-                  '@ 0 Barriers Foundation',
-                ]}
-              />
-              <AboutInfoItem
-                title="Nov-Sep 2023"
-                items={['Research Assistant', '@ University of Toronto']}
-              />
-            </div>
           </div>
+          <SkillsSection skills={skillSets} />
         </div>
         <ContactBanner />
       </AboutPageStyles>

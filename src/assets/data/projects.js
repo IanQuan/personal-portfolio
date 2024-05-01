@@ -17,7 +17,7 @@ const projects = [
   {
     id: uuidv4(),
     name: 'J2C Translator',
-    desc: 'The first Transformer model for Jyutping to Chinese Characters transliteration. To tackle the notorious homophonic ambiguities problem in Cantonese, we introduced a Homophones Weighting layer to capture homophonic relationships between characters.',
+    desc: 'The first Transformer model for sentence-based Jyutping to Chinese Characters transliteration.',
     img: JyutpingImg,
     github: 'https://github.com/IanQuan/J2P-Translator',
     other_link: ['Report', J2CReport],
@@ -31,23 +31,22 @@ const projects = [
         ],
       },
       {
-        heading: 'Impact of Homophone Weighting',
+        heading: 'Homophone Weighting Layer',
         description: [
           '- Incorporated a Homophone Weighting layer to adjust logits for homophonic characters.',
-          '- Improved model accuracy significantly from 51% to 78%.',
+          '- Improved test accuracy from 51% to 78%.',
         ],
       },
       {
         heading: 'Hyperparameter Optimization',
         description: [
-          '- Utilized Ray Tune for further tuning of the model.',
-          '- Achieved a remarkable increase in accuracy, reaching 94% on the testing set.',
+          '- Utilized Ray Tune for hyperparameter-tuning.',
+          '- Increased test accuracy to 94%.',
         ],
       },
       {
         heading: 'Transformer vs. RNN Performance',
         description: [
-          '- Compared Transformer model with homophone weighting against a vanilla RNN.',
           '- Demonstrated Transformer’s superior capability in handling long-range dependencies and maintaining contextual information.',
           '- Resolved homophone ambiguity more effectively than RNN, which achieved 75.8% accuracy.',
         ],
@@ -55,16 +54,14 @@ const projects = [
       {
         heading: 'Cultural and Societal Impact',
         description: [
-          '- Project carries significant cultural and societal implications, particularly in Cantonese-speaking communities.',
           '- Many transcripts exist only in Jyutping, highlighting the importance of enhanced transliteration models.',
-          '- Contributes to both practical aspects of NLP and preservation of linguistic heritage.',
           '- Supports the vitality of the Cantonese language, fostering identity and continuity.',
         ],
       },
       {
-        heading: 'Model Limitations and Data Challenges',
+        heading: 'Model Limitations',
         description: [
-          '- High accuracy model still faced challenges with domain-specific lexicons and out-of-vocabulary terms.',
+          '- Challenges include domain-specific lexicons and out-of-vocabulary terms.',
           '- Limitations in handling specific transliteration scenarios were evident.',
           '- Scarcity of comprehensive Cantonese-Jyutping datasets constrains the model’s ability to generalize effectively.',
         ],
@@ -82,17 +79,45 @@ const projects = [
 
   {
     id: uuidv4(),
-    name: 'MeetHomie',
-    desc: 'An app to help people to get an overview of how they can make the city beautiful.',
+    name: 'Meet-Homie',
+    desc: 'An app to help people schedule one-on-one meeting that matches their preferences.',
     img: MettHomieImg,
     github: 'https://github.com/IanQuan/Meet-Homie-scheduling-app',
     other_link: '',
     detail_title: 'Main Features',
     features: [
-      'Community-driven content',
-      'Scheduling for events and activities',
-      'User profiles with customization options',
+      {
+        heading: 'One-On-One Meeting Scheduling',
+        description: [
+          'Seamlessly schedule meetings between two parties with streamlined booking and confirmation steps.',
+        ],
+      },
+      {
+        heading: 'Preference-Based Scheduling',
+        description: [
+          'Hosts can prioritize their available times as high, medium, or low preference, guiding the scheduling process.',
+        ],
+      },
+      {
+        heading: 'Schedule Matching',
+        description: [
+          'The system analyzes preferences from both host and invitee to suggest the best possible meeting time, optimizing for mutual convenience.',
+        ],
+      },
+      {
+        heading: 'Comprehensive Dashboard',
+        description: [
+          'Both hosts and invitees can view and manage their scheduled meetings on a user-friendly dashboard, enhancing user experience and accessibility.',
+        ],
+      },
+      {
+        heading: 'Editable User Profiles and Contact Lists',
+        description: [
+          'Users have the flexibility to update their profile information and manage their contacts, ensuring ease of use and personalization.',
+        ],
+      },
     ],
+
     techStack: findTechIcons([
       'React.js',
       'Node.js',

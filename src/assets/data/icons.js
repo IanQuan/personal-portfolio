@@ -17,6 +17,11 @@ export const skills = [
           'https://getbootstrap.com/docs/5.3/assets/brand/bootstrap-logo-shadow.png',
       },
       {
+        name: 'C',
+        image:
+          'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/c/c-original.svg',
+      },
+      {
         name: 'CSS',
         image:
           'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg',
@@ -29,6 +34,11 @@ export const skills = [
         name: 'Docker',
         image:
           'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-plain.svg',
+      },
+      {
+        name: 'Excel',
+        image:
+          'https://upload.wikimedia.org/wikipedia/commons/3/34/Microsoft_Office_Excel_%282019%E2%80%93present%29.svg',
       },
       {
         name: 'Figma',
@@ -82,9 +92,19 @@ export const skills = [
           'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg',
       },
       {
+        name: 'Jira',
+        image:
+          'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jira/jira-original.svg',
+      },
+      {
         name: 'Jquery',
         image:
           'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jquery/jquery-plain-wordmark.svg',
+      },
+      {
+        name: 'Jupyter',
+        image:
+          'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jupyter/jupyter-original-wordmark.svg',
       },
       {
         name: 'Kaggle',
@@ -132,9 +152,9 @@ export const skills = [
           'https://seeklogo.com/images/N/netlify-logo-BD8F8A77E2-seeklogo.com.png',
       },
       {
-        name: 'Next Js',
+        name: 'Next.js',
         image:
-          'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAACTklEQVR4Ab1XAaQqURB9DyohSykREpRIQSAlBCoECKUFCSRCBBEAaSEABQEoCIEASCwAUICIALgCo83do0//9v819XX845O7VnDkzOzP7JWGaBd3C3IJpQVjAHeJ+Rs9a97vKLGrBsB1KgMhEP3FMUUwt4ENMfxr1yQIU4SSjRkbeOZtERmHk6pXQVDlnkHh9S+QLTm1hkiz4n/gzFQuny9FoFLquE+i34x+n02k0m00UCoV3BIzn3MMJrVYLtp1OJ0cS/X4f5/MZhmG8IyDsWtDfEaDIn2232/3zbrvdxuFwwGg04qRBt+VnETBNE0IIkE2n07/erdfrWK/X6Ha73Hb9ZXII3G43ivy3dNRqtZe7lUoFs9mM6oBDwCQCgquALT1FT3a5XF7qIZ/PYzgcolqtcggIIgBZAgRKB6lCRalp2uM8k8mAVMrlchwC+DEBipycE4n5fP44j8ViKJVKSCaTbAJCpgaez4vFIsjoWa/XA50FAgEkEgmEw2F2CkxZBZ5Br5tt1ITcbjd8Ph88Hg+7CBefECCsVitS4aVJcV9D/VMCVITk/Hq9YrPZyBBo2a1YMGvAcQYcj0cCtWMugcdYNhjDiBrP25mx3++x3W6RzWZZ8isfxzQLlsslJpMJpYY5jhkqcOH1ejEYDDAej9FoNOByuZxGsfqVzC7KTqcDSkkqleKsZOqX0mAwiHK5DGrJfr+fs5SqX8sjkQji8ThCoRC+v78Za7l6JagrUh3YkUuZpqgwDaecc9VYSDoV5Fg+at7n+eLN57kuE/EvzHr/Kvs31aYAAAAASUVORK5CYII=',
+          'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg',
       },
       {
         name: 'Node.js',
@@ -147,7 +167,7 @@ export const skills = [
           'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/numpy/numpy-original.svg',
       },
       {
-        name: 'Opencv',
+        name: 'OpenCV',
         image:
           'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/opencv/opencv-original.svg',
       },
@@ -217,6 +237,11 @@ export const skills = [
         name: 'Tailwindcss',
         image:
           'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg',
+      },
+      {
+        name: 'TypeScript',
+        image:
+          'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-plain.svg',
       },
       {
         name: 'VS Code',
