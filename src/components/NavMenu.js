@@ -1,14 +1,7 @@
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
-import {
-  MdHome,
-  MdPerson,
-  MdWork,
-  MdContactMail,
-  MdMenu,
-  MdClose,
-} from 'react-icons/md';
+import { MdHome, MdPerson, MdWork, MdContactMail } from 'react-icons/md';
 
 const NavStyles = styled.nav`
   position: fixed;
@@ -79,21 +72,27 @@ const NavStyles = styled.nav`
   }
 
   @media only screen and (max-width: 768px) {
-    width: 90%; // Make wider on smaller screens
-    left: 5%; // Align with the page
-    transform: none; // Remove transform on mobile for full-width adjustment
+    width: 90%;
+    left: 5%;
+    transform: none;
+    padding: 0rem 0rem; // Uniform padding
+    background: rgba(40, 40, 40, 0.8); // Semi-transparent background
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); // Soft shadow for floating effect
+    border-radius: 30px; // Rounded corners for the nav box
 
     .mobile-menu-icon {
       display: block;
+      background: transparent; // No background
+      box-shadow: none; // No shadow
     }
 
     .navItems {
-      padding: 1rem;
-      position: absolute;
-      top: var(--top);
-      right: 1rem; // Align to the right
-      background-color: var(--deep-dark);
-      border-radius: 12px;
+      padding: 0.5rem;
+      right: 0.5rem;
+    }
+
+    li a:hover .nav-text {
+      font-size: 1rem; // Reduced font size on hover for mobile
     }
   }
 `;
@@ -117,9 +116,7 @@ export default function NavMenu() {
         role="button"
         tabIndex={0}
         aria-label="Toggle navigation"
-      >
-        <MdMenu />
-      </div>
+      />
 
       <ul className={!showNav ? 'navItems hide-item' : 'navItems'}>
         <div
@@ -129,9 +126,7 @@ export default function NavMenu() {
           role="button"
           tabIndex={0}
           aria-label="Close navigation"
-        >
-          <MdClose />
-        </div>
+        />
         {['/', '/about', '/projects', '/contact'].map((path, index) => (
           <li key={index}>
             <NavLink

@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { useParams, useHistory } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
-// eslint-disable-next-line import/no-extraneous-dependencies
 import { motion } from 'framer-motion';
 import ProjectsInfo from '../assets/data/projects';
 import Button from '../components/Button';
@@ -165,7 +164,7 @@ const pageTransition = {
 
 export default function ProjectDetail() {
   const { projectName } = useParams();
-  const history = useHistory();
+  const navigate = useNavigate(); // Updated to useNavigate
   const [projectIndex, setProjectIndex] = useState(0);
   const [project, setProject] = useState(null);
 
@@ -182,17 +181,13 @@ export default function ProjectDetail() {
   const handlePrev = () => {
     const newIndex =
       projectIndex === 0 ? ProjectsInfo.length - 1 : projectIndex - 1;
-    history.push(
-      `/projects/${encodeURIComponent(ProjectsInfo[newIndex].name)}`
-    );
+    navigate(`/projects/${encodeURIComponent(ProjectsInfo[newIndex].name)}`);
   };
 
   const handleNext = () => {
     const newIndex =
       projectIndex === ProjectsInfo.length - 1 ? 0 : projectIndex + 1;
-    history.push(
-      `/projects/${encodeURIComponent(ProjectsInfo[newIndex].name)}`
-    );
+    navigate(`/projects/${encodeURIComponent(ProjectsInfo[newIndex].name)}`);
   };
 
   if (!project) {
