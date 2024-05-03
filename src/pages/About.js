@@ -9,7 +9,7 @@ import AboutImg from '../assets/images/portrait_sketch.png';
 import ContactBanner from '../components/ContactBanner';
 import Resume from '../assets/reports/Ian_Quan_Resume.pdf';
 import SkillsSection from '../components/SkillsSection';
-import { skills as allSkills } from '../assets/data/icons'; // Assuming this is the correct path to your icon data
+import { skills as allSkills } from '../assets/data/icons';
 
 const pageTransition = {
   initial: {
