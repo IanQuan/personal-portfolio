@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { BsInstagram, BsLinkedin, BsGithub } from 'react-icons/bs';
+import { motion } from 'framer-motion';
 import HeroImg from '../assets/images/cn_tower.jpg';
 import SocialMediaArrow from '../assets/images/social-media-arrow.svg';
 import ScrollDownArrow from '../assets/images/scroll-down-arrow.svg';
@@ -166,6 +167,14 @@ const HeroStyles = styled.div`
     }
   }
 `;
+const socialVariants = {
+  hidden: { opacity: 0, y: 50 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { type: 'spring', duration: 1, delay: 1 },
+  },
+};
 
 export default function HeroSection() {
   return (
@@ -177,60 +186,60 @@ export default function HeroSection() {
             <span className="hero__name">Ian Quan</span>
           </h1>
           <div className="hero__img">
-            <img src={HeroImg} alt="" />
+            <img src={HeroImg} alt="Ian Quan" />
           </div>
           <div className="hero__info">
             <PText>
               Welcome to my personal website! Here you can learn more about me
-              and my interest.
+              and my interests.
             </PText>
           </div>
           <div className="hero__social">
-            <div className="hero__social__indicator">
+            <motion.div
+              className="hero__social__indicator"
+              initial="hidden"
+              animate="visible"
+              variants={socialVariants}
+            >
               <p>Follow</p>
               <img src={SocialMediaArrow} alt="icon" />
-            </div>
+            </motion.div>
             <div className="hero__social__text">
               <ul>
-                <li>
-                  <a
-                    href="https://www.linkedin.com/in/ian-quan-ca/"
-                    target="_blank"
-                    rel="noreferrer"
-                    aria-label="LinkedIn"
-                    className="social-icon"
+                {[
+                  'https://www.linkedin.com/in/ian-quan-ca/',
+                  'http://instagram.com/ianquanhk',
+                  'http://github.com/ianquan',
+                ].map((link, index) => (
+                  <motion.li
+                    key={index}
+                    initial="hidden"
+                    animate="visible"
+                    variants={socialVariants}
                   >
-                    <BsLinkedin />
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="http://instagram.com/ianquanhk"
-                    target="_blank"
-                    rel="noreferrer"
-                    aria-label="Instagram"
-                    className="social-icon"
-                  >
-                    <BsInstagram />
-                  </a>
-                </li>
-                <li>
-                  <a
-                    href="http://github.com/ianquan"
-                    target="_blank"
-                    rel="noreferrer"
-                    aria-label="Github"
-                    className="social-icon"
-                  >
-                    <BsGithub />
-                  </a>
-                </li>
+                    <a
+                      href={link}
+                      target="_blank"
+                      rel="noreferrer"
+                      aria-label={['LinkedIn', 'Instagram', 'Github'][index]}
+                      className="social-icon"
+                    >
+                      {[<BsLinkedin />, <BsInstagram />, <BsGithub />][index]}
+                    </a>
+                  </motion.li>
+                ))}
               </ul>
             </div>
           </div>
           <div className="hero__scrollDown">
-            <p>Scroll</p>
-            <img src={ScrollDownArrow} alt="ScrollDown Arrow" />
+            <motion.div
+              initial="hidden"
+              animate="visible"
+              variants={socialVariants}
+            >
+              <p>Scroll</p>
+              <img src={ScrollDownArrow} alt="Scroll Down Arrow" />
+            </motion.div>
           </div>
         </div>
       </div>

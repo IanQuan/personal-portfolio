@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 // eslint-disable-next-line import/no-extraneous-dependencies
 import { motion } from 'framer-motion';
+import Typical from 'react-typical';
 import PText from '../components/PText';
 import Button from '../components/Button';
 import AboutImg from '../assets/images/portrait_sketch.png';
@@ -190,7 +191,22 @@ export default function About() {
               <p className="about__subheading">
                 Hi, I am <span>Ian Quan</span>
               </p>
-              <h2 className="about__heading">A software engineer</h2>
+              <h2 className="about__heading">
+                <Typical
+                  steps={[
+                    'A Software Engineer',
+                    1000,
+                    'A Data Analyst',
+                    1000,
+                    'An AI Engineer',
+                    1000,
+                    'A Research Assistant',
+                    1000,
+                  ]}
+                  loop={Infinity}
+                  wrapper="p"
+                />
+              </h2>{' '}
               <div className="about__info">
                 <PText>
                   Hello! I'm Ian, a third-year undergraduate at the University

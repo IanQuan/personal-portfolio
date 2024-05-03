@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
-// eslint-disable-next-line import/no-extraneous-dependencies
 import { motion } from 'framer-motion';
 import SectionTitle from '../components/SectionTitle';
 import ProjectsInfo from '../assets/data/projects';
@@ -23,6 +22,21 @@ const pageTransition = {
       duration: 0.5,
     },
   },
+};
+
+const projectVariants = {
+  initial: {
+    opacity: 0,
+    y: 50,
+  },
+  animate: (index) => ({
+    opacity: 1,
+    y: 0,
+    transition: {
+      delay: index * 0.1, // each card will appear with a delay of 0.1s between them
+      duration: 0.5,
+    },
+  }),
 };
 
 const ProjectStyle = styled.div`
@@ -53,17 +67,22 @@ export default function Projects() {
           />
 
           <div className="projects__allItems">
-            {projectsData.map((item) => (
-              <Link
-                to={`/projects/${encodeURIComponent(item.name)}`}
+            {projectsData.map((item, index) => (
+              <motion.div
                 key={item.id}
+                custom={index}
+                initial="initial"
+                animate="animate"
+                variants={projectVariants}
               >
-                <ProjectItem
-                  title={item.name}
-                  desc={item.desc}
-                  img={item.img}
-                />
-              </Link>
+                <Link to={`/projects/${encodeURIComponent(item.name)}`}>
+                  <ProjectItem
+                    title={item.name}
+                    desc={item.desc}
+                    img={item.img}
+                  />
+                </Link>
+              </motion.div>
             ))}
           </div>
         </div>
