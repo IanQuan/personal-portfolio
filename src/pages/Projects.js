@@ -79,7 +79,7 @@ export default function Projects() {
                   <ProjectItem
                     title={item.name}
                     desc={item.desc}
-                    img={item.img}
+                    img={item.images[0]}
                   />
                 </Link>
               </motion.div>

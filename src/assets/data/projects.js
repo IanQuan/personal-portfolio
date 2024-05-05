@@ -1,12 +1,17 @@
 import { v4 as uuidv4 } from 'uuid';
 import JyutpingImg from '../images/jyutping.png';
-import MettHomieImg from '../images/meethomie.png';
+import MeetHomieImg from '../images/meethomie.png';
 import RoadImg from '../images/road_segmentaion.png';
 import a11ylabImg from '../images/a11ylab.png';
 import phoneImg from '../images/phone.png';
 import { skills } from './icons';
 import J2CReport from '../reports/J2C_Translator.pdf';
 import RoadReport from '../reports/Road_Detection.pdf';
+import MH1 from '../images/MH1.png'
+import MH2 from '../images/MH2.png'
+import MH3 from '../images/MH3.png'
+import MH4 from '../images/MH4.png'
+import MH5 from '../images/MH5.png'
 
 const findTechIcons = (techStack) =>
   techStack.map((tech) =>
@@ -18,7 +23,7 @@ const projects = [
     id: uuidv4(),
     name: 'J2C Translator',
     desc: 'The first Transformer model for sentence-based Jyutping to Chinese Characters transliteration.',
-    img: JyutpingImg,
+    images: [JyutpingImg],
     github: 'https://github.com/IanQuan/J2P-Translator',
     other_link: ['Report', J2CReport],
     detail_title: 'Results and Analysis',
@@ -81,7 +86,7 @@ const projects = [
     id: uuidv4(),
     name: 'Meet-Homie',
     desc: 'An app to help people schedule one-on-one meeting that matches their preferences.',
-    img: MettHomieImg,
+    images: [MeetHomieImg, MH1, MH2, MH3, MH4, MH5],
     github: 'https://github.com/IanQuan/Meet-Homie-scheduling-app',
     other_link: '',
     detail_title: 'Main Features',
@@ -133,7 +138,7 @@ const projects = [
     id: uuidv4(),
     name: 'A11y Lab Simulation',
     desc: 'A testing platform, designed for software developers and accessibility testers, that enables users to simulate WCAG violations',
-    img: a11ylabImg,
+    images: [a11ylabImg],
     detail_title: 'Main Features',
     other_link: '',
     features: [
@@ -194,9 +199,9 @@ const projects = [
 
   {
     id: uuidv4(),
-    name: 'Road Segmention with U-Net',
+    name: 'U-Net Road Segmentation',
     desc: 'This project developed a road segmentation model using the U-Net architecture for autonomous driving applications',
-    img: RoadImg,
+    images: [RoadImg],
     github: 'https://github.com/IanQuan/Road-Segmentation-with-U-Net',
     other_link: ['Report', RoadReport],
     detail_title: 'Analysis and Insights',
@@ -260,7 +265,7 @@ const projects = [
     id: uuidv4(),
     name: 'Phone Scraper',
     desc: 'An application that users to input a TAC or IMEI code, and fetches relevant product listings from Amazon, BestBuy, and eBay.',
-    img: phoneImg,
+    images: [phoneImg],
     github: 'https://github.com/IanQuan/TAC-mobile-phone-web-scrappng',
     other_link: '',
     detail_title: 'Main Features',

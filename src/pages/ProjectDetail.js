@@ -8,6 +8,7 @@ import PText from '../components/PText';
 import SectionTitle from '../components/SectionTitle';
 import TechStack from '../components/TechStack';
 import ArrowNavigation from '../components/ArrowNavigation';
+import ProjectImage from '../components/ProjectImage';
 
 const ProjectStyle = styled.div`
   padding: 10rem 0;
@@ -41,14 +42,6 @@ const ProjectStyle = styled.div`
   .projectDetailSection__left,
   .projectDetailSection__right {
     flex: 1;
-  }
-
-  .projectDetailImg {
-    width: 100%; /* Adjust width to fit the container */
-    height: auto; /* Maintain aspect ratio */
-    border-radius: 20px;
-    box-shadow: 0px 10px 20px rgba(0, 0, 0, 1); /* Optional: drop shadow for depth */
-    margin-top: 2rem;
   }
 
   .features-section {
@@ -205,7 +198,7 @@ export default function ProjectDetail() {
         <div className="container">
           <div className="projectDetailSection__left">
             <SectionTitle subheading="" heading={project.name} />
-            <PText>{project.desc}</PText>
+            <PText noMargin>{project.desc}</PText>
             <div className="projectDetailSection__buttons">
               <Button
                 btnText="Github"
@@ -223,7 +216,7 @@ export default function ProjectDetail() {
             </div>
           </div>
           <div className="projectDetailSection__right">
-            <img className="projectDetailImg" src={project.img} alt="Img" />
+          <ProjectImage images={project.images} />
           </div>
         </div>
         <div className="containerSecond">
