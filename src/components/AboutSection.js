@@ -82,7 +82,9 @@ export default function AboutSection() {
             heading="About Me"
           />
           <PText>
-            I am a third year Computer Science and Statistics major at the University of Toronto. I am a full stack software engineer with interest in machine learning.
+            I am a third year Computer Science and Statistics major at the
+            University of Toronto. I am a full stack software engineer with
+            interest in machine learning.
           </PText>
           <div className="aboutSection__buttons">
             <Button btnText="Resume" btnLink={Resume} type="pdf" />

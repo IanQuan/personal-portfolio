@@ -1,5 +1,4 @@
 import React from 'react';
-// eslint-disable-next-line import/no-extraneous-dependencies
 import { motion } from 'framer-motion';
 import AboutSection from '../components/AboutSection';
 import ServicesSection from '../components/ServicesSection';
