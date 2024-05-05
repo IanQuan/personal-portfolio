@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-// eslint-disable-next-line import/no-extraneous-dependencies
+import Typewriter from 'typewriter-effect';
 import { motion } from 'framer-motion';
 import PText from '../components/PText';
 import Button from '../components/Button';
@@ -190,6 +190,32 @@ export default function About() {
               <p className="about__subheading">
                 Hi, I am <span>Ian Quan</span>
               </p>
+              <div className="about__heading">
+                <Typewriter
+                  onInit={(typewriter) => {
+                    typewriter
+                      .typeString('A Software Engineer')
+                      .pauseFor(800)
+                      .deleteAll()
+                      .typeString('A Data Analyst')
+                      .pauseFor(800)
+                      .deleteAll()
+                      .typeString('An AI Engineer')
+                      .pauseFor(800)
+                      .deleteAll()
+                      .typeString('A Research Assistant')
+                      .pauseFor(800)
+                      .start();
+                  }}
+                  options={{
+                    loop: true,
+                    autoStart: true,
+                    delay: 50, // Faster typing speed
+                    deleteSpeed: 50, // Faster deletion speed
+                  }}
+                />
+              </div>
+
               <div className="about__info">
                 <PText>
                   Hello! I'm Ian, a third-year undergraduate at the University

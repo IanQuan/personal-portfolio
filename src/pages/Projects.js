@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
-import styled from 'styled-components';
-import { Link } from 'react-router-dom';
-import { motion } from 'framer-motion';
-import SectionTitle from '../components/SectionTitle';
-import ProjectsInfo from '../assets/data/projects';
-import ProjectItem from '../components/ProjectItem';
+import React, { useState } from "react";
+import styled from "styled-components";
+import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
+import SectionTitle from "../components/SectionTitle";
+import ProjectsInfo from "../assets/data/projects";
+import ProjectItem from "../components/ProjectItem";
 
 const pageTransition = {
   initial: {

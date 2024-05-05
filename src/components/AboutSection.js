@@ -85,7 +85,7 @@ export default function AboutSection() {
             I am a third year Computer Science and Statistics major at the University of Toronto. I am a full stack software engineer with interest in machine learning.
           </PText>
           <div className="aboutSection__buttons">
-          <Button btnText="Resume" btnLink={Resume} type="pdf" />
+            <Button btnText="Resume" btnLink={Resume} type="pdf" />
             <Button btnText="Read More" btnLink="/about" outline />
           </div>
         </div>
