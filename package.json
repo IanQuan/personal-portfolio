@@ -27,7 +27,7 @@
     "build": "NODE_OPTIONS=--openssl-legacy-provider react-scripts build",
     "test": "NODE_OPTIONS=--openssl-legacy-provider react-scripts test",
     "eject": "NODE_OPTIONS=--openssl-legacy-provider react-scripts eject",
-    "install": "npm install --force --legacy-peer-deps"
+    "install": "npm install --force"
   },
   "eslintConfig": {
     "extends": [
