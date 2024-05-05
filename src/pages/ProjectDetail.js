@@ -42,6 +42,8 @@ const ProjectStyle = styled.div`
   .projectDetailSection__left,
   .projectDetailSection__right {
     flex: 1;
+    margin-left: 2rem;
+    margin-right: 2rem;
   }
 
   .features-section {

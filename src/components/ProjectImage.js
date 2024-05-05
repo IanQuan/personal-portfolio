@@ -8,14 +8,14 @@ const GalleryContainer = styled.div`
   .image-gallery {
     .image-gallery-image {
       border-radius: 20px;
-      box-shadow: 0px 10px 20px rgba(0, 0, 0, 1);
+      // box-shadow: 0px 10px 20px rgba(0, 0, 0, 1);
     }
 
     .image-gallery-thumbnails .image-gallery-thumbnail {
       cursor: pointer; // Changes cursor to pointer when hovering over thumbnails
 
       &:hover {
-        box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5); // Optional: add a hover effect with a shadow for better visual feedback
+        box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5); 
       }
     }
   }
@@ -32,7 +32,7 @@ const ProjectImage = ({ images }) => {
     <GalleryContainer>
       <ImageGallery
         items={imageGalleryItems}
-        autoPlay={true}
+        autoPlay={false}
         slideInterval={3000}
         showPlayButton={false} // Hides the play button
         showFullscreenButton={toBeRequired} 

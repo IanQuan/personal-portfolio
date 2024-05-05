@@ -1,17 +1,34 @@
 import { v4 as uuidv4 } from 'uuid';
 import JyutpingImg from '../images/jyutping.png';
+import J2C1 from '../images/J2C1.png'
+import J2C2 from '../images/J2C2.png'
+
 import MeetHomieImg from '../images/meethomie.png';
-import RoadImg from '../images/road_segmentaion.png';
-import a11ylabImg from '../images/a11ylab.png';
-import phoneImg from '../images/phone.png';
-import { skills } from './icons';
-import J2CReport from '../reports/J2C_Translator.pdf';
-import RoadReport from '../reports/Road_Detection.pdf';
 import MH1 from '../images/MH1.png'
 import MH2 from '../images/MH2.png'
 import MH3 from '../images/MH3.png'
 import MH4 from '../images/MH4.png'
 import MH5 from '../images/MH5.png'
+
+import a11ylabImg from '../images/a11ylab.png';
+import A11Y1  from '../images/A11Y1.png';
+import A11Y2  from '../images/A11Y2.png';
+import A11Y3  from '../images/A11Y3.png';
+import A11Y4  from '../images/A11Y4.png';
+import A11Y6  from '../images/A11Y6.png';
+import A11Y7  from '../images/A11Y7.png';
+import A11Y8  from '../images/A11Y8.png';
+
+import RoadImg from '../images/road_segmentaion.png';
+import Road1 from '../images/Road1.png'
+import Road2 from '../images/Road2.png'
+import Road3 from '../images/Road3.png'
+import Road4 from '../images/Road4.png'
+
+import phoneImg from '../images/phone.png';
+import { skills } from './icons';
+import J2CReport from '../reports/J2C_Translator.pdf';
+import RoadReport from '../reports/Road_Detection.pdf';
 
 const findTechIcons = (techStack) =>
   techStack.map((tech) =>
@@ -23,7 +40,7 @@ const projects = [
     id: uuidv4(),
     name: 'J2C Translator',
     desc: 'The first Transformer model for sentence-based Jyutping to Chinese Characters transliteration.',
-    images: [JyutpingImg],
+    images: [JyutpingImg, J2C1, J2C2],
     github: 'https://github.com/IanQuan/J2P-Translator',
     other_link: ['Report', J2CReport],
     detail_title: 'Results and Analysis',
@@ -138,7 +155,7 @@ const projects = [
     id: uuidv4(),
     name: 'A11y Lab Simulation',
     desc: 'A testing platform, designed for software developers and accessibility testers, that enables users to simulate WCAG violations',
-    images: [a11ylabImg],
+    images: [a11ylabImg, A11Y1, A11Y2, A11Y3, A11Y4, A11Y6, A11Y7, A11Y8],
     detail_title: 'Main Features',
     other_link: '',
     features: [
@@ -201,7 +218,7 @@ const projects = [
     id: uuidv4(),
     name: 'U-Net Road Segmentation',
     desc: 'This project developed a road segmentation model using the U-Net architecture for autonomous driving applications',
-    images: [RoadImg],
+    images: [RoadImg, Road1, Road2, Road3, Road4],
     github: 'https://github.com/IanQuan/Road-Segmentation-with-U-Net',
     other_link: ['Report', RoadReport],
     detail_title: 'Analysis and Insights',

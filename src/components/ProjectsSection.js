@@ -93,7 +93,7 @@ export default function ProjectsSection() {
                   >
                     <ProjectItem
                       title={project.name}
-                      img={project.img}
+                      img={project.images[0]}
                       desc={project.desc}
                     />
                   </Link>
