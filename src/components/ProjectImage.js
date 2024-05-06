@@ -4,7 +4,10 @@ import ImageGallery from 'react-image-gallery';
 import 'react-image-gallery/styles/css/image-gallery.css';
 import styled from 'styled-components';
 
-const GalleryContainer = styled.div`
+const GalleryContainer = styled.div`   
+  max-width: 700px;
+  margin: auto; 
+
   .image-gallery {
     .image-gallery-image {
       border-radius: 20px;

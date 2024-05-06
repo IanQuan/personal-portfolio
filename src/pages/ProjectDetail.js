@@ -55,6 +55,7 @@ const ProjectStyle = styled.div`
     margin-top: 5rem;
     margin-left: 10rem;
     margin-right: 10rem;
+    margin-bottom: 15rem;
   }
 
   .feature-card {
@@ -90,13 +91,34 @@ const ProjectStyle = styled.div`
     font-size: 4rem;
     text-align: center; /* Center the title */
     width: 100%; /* Ensure the title spans the full width */
-    margin-top: 5rem; /* Optional: adjust top margin for spacing */
   }
 
   .arrowNavigation {
     margin-top: 6rem;
     margin-bottom: 6rem;
   }
+
+  .problem-section {
+    padding: 3rem;    
+    font-size: 1.8rem;
+    line-height: 1.8em;
+    margin-bottom: 15rem;
+
+    p {         
+      max-width: 800px;
+    }
+
+    .question {
+      color: #2C2C2C;
+      font-size: 2.2rem;
+      background-color: rgba(192, 189, 189, 1); 
+      padding: 1rem;
+      font-weight: bold; // Make the font bold
+      display: inline-block; // Change display to inline-block for background to fit text
+      margin-bottom: 1.5rem; // Optional: add some space below each question
+    }
+  }
+
   @media only screen and (max-width: 1024px) {
 
     .features-section {
@@ -142,6 +164,10 @@ const ProjectStyle = styled.div`
       margin-right: 2rem;
       
     }
+    .problem-section {
+      font-size: 1.4rem;
+      max-width: 550px;
+
   }
 `;
 const pageTransition = {
@@ -189,7 +215,35 @@ export default function ProjectDetail() {
       projectIndex === ProjectsInfo.length - 1 ? 0 : projectIndex + 1;
     navigate(`/projects/${encodeURIComponent(ProjectsInfo[newIndex].name)}`);
   };
-
+  const renderText = (text) => {
+    const paragraphs = text.split('\n');
+    return paragraphs.map((paragraph, index) => {
+      let match = paragraph.match(/^[^?]*\?/);
+      if (match) {
+        const question = match[0];
+        const restOfParagraph = paragraph.substring(question.length);
+  
+        return (
+          <React.Fragment key={index}>
+            <div>
+              <p className="question">{question}</p>
+              <p>{restOfParagraph}</p>
+            </div>
+            {index !== paragraphs.length - 1 && <br />}
+          </React.Fragment>
+        );
+      } else {
+        return (
+          <React.Fragment key={index}>
+            <p>{paragraph}</p>
+            {index !== paragraphs.length - 1 && <br />}
+          </React.Fragment>
+        );
+      }
+    });
+  };
+  
+  
   if (!project) {
     return <div>Project not found</div>;
   }
@@ -223,10 +277,15 @@ export default function ProjectDetail() {
             </div>
           </div>
           <div className="projectDetailSection__right">
-          <ProjectImage images={project.images} />
+            <ProjectImage images={project.images} />
           </div>
         </div>
+
         <div className="containerSecond">
+          <SectionTitle subheading="" heading={"Problem Statement"} />
+          <div className="problem-section">
+            {renderText(project.problem)}
+          </div>
           <SectionTitle subheading="" heading={project.detail_title} />
           <div className="features-section">
             {project.features.map((feature, index) => (
