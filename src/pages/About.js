@@ -29,14 +29,13 @@ const pageTransition = {
 };
 
 const AboutPageStyles = styled.div`
-  padding: 20rem 0 10rem 0;
-
   .top-section {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 2rem;
     position: relative; // Make sure the parent is positioned relative
+    min-height: 100vh;
   }
   .left {
     flex: 3;
@@ -243,7 +242,6 @@ export default function About() {
           </div>
           <SkillsSection skills={skillSets} />
         </div>
-        <ContactBanner />
       </AboutPageStyles>
     </motion.div>
   );

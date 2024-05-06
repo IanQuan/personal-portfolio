@@ -29,10 +29,11 @@ const MapStyles = styled.div`
   .map__card__link {
     display: inline-block;
     font-size: 1.6rem;
-    margin-top: 3rem;
+    margin-top: 2rem;
     text-decoration: underline;
   }
   @media only screen and (max-width: 768px) {
+    margin-top: 10rem;
     background-position: 80% center;
   }
   @media only screen and (max-width: 400px) {

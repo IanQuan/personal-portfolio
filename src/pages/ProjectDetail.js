@@ -11,12 +11,12 @@ import ArrowNavigation from '../components/ArrowNavigation';
 import ProjectImage from '../components/ProjectImage';
 
 const ProjectStyle = styled.div`
-  padding: 10rem 0;
   .container {
     display: flex;
     align-items: center;
     justify-content: flex-start;
     text-align: left;
+    min-height: 100vh;
   }
 
   .containerSecond {
@@ -25,7 +25,6 @@ const ProjectStyle = styled.div`
     align-items: center;
     justify-content: flex-start;
     text-align: left;
-    margin-top: 10rem;
   }
 
   .section-title {
@@ -96,8 +95,10 @@ const ProjectStyle = styled.div`
 
   .arrowNavigation {
     margin-top: 6rem;
+    margin-bottom: 6rem;
   }
   @media only screen and (max-width: 1024px) {
+
     .features-section {
       grid-template-columns: repeat(2, 1fr); /* 2 cards in a row for tablets */
       margin-left: 10rem;
@@ -106,9 +107,12 @@ const ProjectStyle = styled.div`
   }
 
   @media only screen and (max-width: 768px) {
+    padding: 10rem 0;
+
     .container {
       flex-direction: column;
       text-align: center;
+      margin-bottom: 10rem;
     }
     .projectDetailSection__left,
     .projectDetailSection__right {
@@ -136,6 +140,7 @@ const ProjectStyle = styled.div`
       gap: 2rem;
       margin-left: 2rem;
       margin-right: 2rem;
+      
     }
   }
 `;

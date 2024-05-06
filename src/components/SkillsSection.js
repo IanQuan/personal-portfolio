@@ -6,7 +6,7 @@ const SkillsSectionStyles = styled.div`
   display: flex;
   flex-direction: column; // Changed to column to stack heading and cards
   align-items: center; // Center the heading and cards horizontally
-  margin-top: 5rem;
+  margin-bottom: 15rem;
 
   .skills-heading {
     font-size: 4rem; // Large font size for the heading
