@@ -224,7 +224,7 @@ export default function About() {
                   With a strong foundation in software engineering and Data analysis, 
                   I bring over 2 years of experience as a research assistant and data analyst. I'm passionate about applying data science and software engineering skills to solve real-world challenges, always seeking creative and user-centered solutions.
                   <br />
-                  <br />In my free time, I love playing basketball and working out, it helps me relieve stress and stay in shape HAHA. Another fun fact about me is that I love cooking, and I even cook for my friends regularly as a side hustle!
+                  <br />In my free time, I love playing basketball and working out, it helps me relieve stress! Another fun fact about me is that I love cooking, and I even cook for my friends regularly as a side hustle!
                 </PText>
               </div>
               <Button btnText="Resume" btnLink={Resume} type="pdf" />
