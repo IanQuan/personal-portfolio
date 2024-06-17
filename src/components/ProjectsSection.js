@@ -82,7 +82,7 @@ export default function ProjectsSection() {
                 slidesPerView: 3,
               },
             }}
-          >
+          > 
             {projects.map((project, index) => {
               if (index >= 5) return;
               return (
