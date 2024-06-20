@@ -119,6 +119,13 @@ const ProjectStyle = styled.div`
     }
   }
 
+  .apology-notice {
+    text-align: left;
+    font-size: 1.6rem;
+    margin-top: 10rem;
+    max-width: 850px;
+  }
+
   @media only screen and (max-width: 1024px) {
 
     .features-section {
@@ -167,7 +174,6 @@ const ProjectStyle = styled.div`
     .problem-section {
       font-size: 1.4rem;
       max-width: 550px;
-
   }
 `;
 const pageTransition = {
@@ -307,6 +313,33 @@ export default function ProjectDetail() {
             <h1 className="tech-stack-title">Tech Stack</h1>
             <TechStack techStack={project.techStack} />
           </div>
+          
+          {project.name === "J2C Translator" && (
+            <p className="apology-notice">
+                I would like to address a mistake I made in this site. I regretfully removed Jacky Fong's name from the final document without his consent. This was an oversight on my part, and I take full responsibility for this error. I sincerely apologize to Jacky Fong for this mistake and any inconvenience or misunderstanding it may have caused. The contributions to the project are clearly stated as follows:<br /><br />
+
+                <strong>Ian Quan</strong><br />
+                - Development of  the Transformer model, particularly the Homophones Weighting Layer.<br />
+                - Model evaluation and optimization.<br />
+                - Literature review.<br />
+                - Co-wrote the final report, contributing to sections on Introduction, Background and Related Work, Model Architecture, and Results.<br /><br />
+
+                <strong>Douglas Quan</strong><br />
+                - Implementation of the base Transformer model.<br />
+                - Data sourcing and pre-processing.<br />
+                - Model evaluation and hyperparameter tuning.<br />
+                - Comparative analysis between the Transformer model and RNN.<br />
+                - Literature review.<br />
+                - Co-wrote the final report, contributing to sections on Introduction, Data, Results, Discussion, Limitations, and Ethical Considerations.<br /><br />
+
+                <strong>Jacky Fong</strong><br />
+                - Discussion of the project idea.<br />
+                - Co-wrote the final report, contributing to the Model Architecture section (Multi-Head Attention graph).<br /><br />
+            </p>
+
+
+
+          )}
         </div>
         <div className="arrowNavigation">
           <ArrowNavigation onPrev={handlePrev} onNext={handleNext} />
