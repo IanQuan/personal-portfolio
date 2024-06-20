@@ -39,69 +39,69 @@ const findTechIcons = (techStack) =>
   );
 
 const projects = [
-  // {
-  //   id: uuidv4(),
-  //   name: 'J2C Translator',
-  //   desc: 'The first Transformer model for sentence-based Jyutping to Chinese Characters transliteration.',
-  //   images: [JyutpingImg, J2C1, J2C2],
-  //   github: 'https://github.com/IanQuan/J2P-Translator',
-  //   other_link: ['Report', J2CReport],
-  //   problem: "Why Use a Transformer Model? The Transformer model employs a sequence-to-sequence architecture with an attention mechanism that allows it to focus on different parts of the input sequence for better context understanding. This feature is particularly beneficial for addressing homophone ambiguity in transliteration. The model does not rely on recurrent layers; instead, it uses self-attention to weigh the influence of each word in the input sequence on each word in the output sequence, thereby capturing nuanced linguistic patterns more effectively. \n Moreover, the Transformer's ability to process data in parallel significantly reduces training times and improves the efficiency of translating sequences from Jyutping to Chinese characters. \n\n Why J2C transliteration is important? A quick transliteration tool from J2C is essential for enhancing linguistic accessibility and preserving the cultural heritage of the Cantonese language. It facilitates language learning by helping non-native speakers and learners convert Romanized representations into Chinese characters, thereby improving comprehension and pronunciation. \n Moreover, it aids in developing robust tools for automatic transcription, machine translation, and voice-activated technologies tailored to the Cantonese-speaking population. This transliteration process is also crucial for linguistic research and documentation, enabling more accurate study and preservation of Cantonese's unique dialectal features and oral traditions.",
-  //   detail_title: 'Results and Analysis',
-  //   features: [
-  //     {
-  //       heading: 'Initial Model Performance',
-  //       description: [
-  //         '- Baseline model achieved a testing accuracy of 51% without specialized tuning.',
-  //         '- Established a foundation for further refinements.',
-  //       ],
-  //     },
-  //     {
-  //       heading: 'Homophone Weighting Layer',
-  //       description: [
-  //         '- Incorporated a Homophone Weighting layer to adjust logits for homophonic characters.',
-  //         '- Improved test accuracy from 51% to 78%.',
-  //       ],
-  //     },
-  //     {
-  //       heading: 'Hyperparameter Optimization',
-  //       description: [
-  //         '- Utilized Ray Tune for hyperparameter-tuning.',
-  //         '- Increased test accuracy to 94%.',
-  //       ],
-  //     },
-  //     {
-  //       heading: 'Transformer vs. RNN Performance',
-  //       description: [
-  //         '- Demonstrated Transformer’s superior capability in handling long-range dependencies and maintaining contextual information.',
-  //         '- Resolved homophone ambiguity more effectively than RNN, which achieved 75.8% accuracy.',
-  //       ],
-  //     },
-  //     {
-  //       heading: 'Cultural and Societal Impact',
-  //       description: [
-  //         '- Many transcripts exist only in Jyutping, highlighting the importance of enhanced transliteration models.',
-  //         '- Supports the vitality of the Cantonese language, fostering identity and continuity.',
-  //       ],
-  //     },
-  //     {
-  //       heading: 'Model Limitations',
-  //       description: [
-  //         '- Challenges include domain-specific lexicons and out-of-vocabulary terms.',
-  //         '- Limitations in handling specific transliteration scenarios were evident.',
-  //         '- Scarcity of comprehensive Cantonese-Jyutping datasets constrains the model’s ability to generalize effectively.',
-  //       ],
-  //     },
-  //   ],
-  //   techStack: findTechIcons([
-  //     'Python',
-  //     'PyTorch',
-  //     'Scikitlearn',
-  //     'Numpy',
-  //     'Hugging Face',
-  //     'Google Colab',
-  //   ]),
-  // },
+  {
+    id: uuidv4(),
+    name: 'J2C Translator',
+    desc: 'The first Transformer model for sentence-based Jyutping to Chinese Characters transliteration.',
+    images: [JyutpingImg, J2C1, J2C2],
+    github: 'https://github.com/IanQuan/J2P-Translator',
+    other_link: ['Report', J2CReport],
+    problem: "Why Use a Transformer Model? The Transformer model employs a sequence-to-sequence architecture with an attention mechanism that allows it to focus on different parts of the input sequence for better context understanding. This feature is particularly beneficial for addressing homophone ambiguity in transliteration. The model does not rely on recurrent layers; instead, it uses self-attention to weigh the influence of each word in the input sequence on each word in the output sequence, thereby capturing nuanced linguistic patterns more effectively. \n Moreover, the Transformer's ability to process data in parallel significantly reduces training times and improves the efficiency of translating sequences from Jyutping to Chinese characters. \n\n Why J2C transliteration is important? A quick transliteration tool from J2C is essential for enhancing linguistic accessibility and preserving the cultural heritage of the Cantonese language. It facilitates language learning by helping non-native speakers and learners convert Romanized representations into Chinese characters, thereby improving comprehension and pronunciation. \n Moreover, it aids in developing robust tools for automatic transcription, machine translation, and voice-activated technologies tailored to the Cantonese-speaking population. This transliteration process is also crucial for linguistic research and documentation, enabling more accurate study and preservation of Cantonese's unique dialectal features and oral traditions.",
+    detail_title: 'Results and Analysis',
+    features: [
+      {
+        heading: 'Initial Model Performance',
+        description: [
+          '- Baseline model achieved a testing accuracy of 51% without specialized tuning.',
+          '- Established a foundation for further refinements.',
+        ],
+      },
+      {
+        heading: 'Homophone Weighting Layer',
+        description: [
+          '- Incorporated a Homophone Weighting layer to adjust logits for homophonic characters.',
+          '- Improved test accuracy from 51% to 78%.',
+        ],
+      },
+      {
+        heading: 'Hyperparameter Optimization',
+        description: [
+          '- Utilized Ray Tune for hyperparameter-tuning.',
+          '- Increased test accuracy to 94%.',
+        ],
+      },
+      {
+        heading: 'Transformer vs. RNN Performance',
+        description: [
+          '- Demonstrated Transformer’s superior capability in handling long-range dependencies and maintaining contextual information.',
+          '- Resolved homophone ambiguity more effectively than RNN, which achieved 75.8% accuracy.',
+        ],
+      },
+      {
+        heading: 'Cultural and Societal Impact',
+        description: [
+          '- Many transcripts exist only in Jyutping, highlighting the importance of enhanced transliteration models.',
+          '- Supports the vitality of the Cantonese language, fostering identity and continuity.',
+        ],
+      },
+      {
+        heading: 'Model Limitations',
+        description: [
+          '- Challenges include domain-specific lexicons and out-of-vocabulary terms.',
+          '- Limitations in handling specific transliteration scenarios were evident.',
+          '- Scarcity of comprehensive Cantonese-Jyutping datasets constrains the model’s ability to generalize effectively.',
+        ],
+      },
+    ],
+    techStack: findTechIcons([
+      'Python',
+      'PyTorch',
+      'Scikitlearn',
+      'Numpy',
+      'Hugging Face',
+      'Google Colab',
+    ]),
+  },
 
   {
     id: uuidv4(),
