@@ -29,9 +29,19 @@ import Road3 from '../images/Road3.png'
 import Road4 from '../images/Road4.png'
 
 import phoneImg from '../images/phone.png';
+
+import HMMImg from '../images/HMM_poster.png';
+import HMM1 from '../images/HMM1.png';
+import HMM2 from '../images/HMM2.png';
+import HMM3 from '../images/HMM3.png';
+import HMM4 from '../images/HMM4.png';
+import HMM5 from '../images/HMM5.png';
+import HMM6 from '../images/HMM6.png';
+
 import { skills } from './icons';
 import J2CReport from '../reports/J2C_Translator.pdf';
 import RoadReport from '../reports/Road_Detection.pdf';
+import HMMReport from '../reports/HMM.pdf';
 
 const findTechIcons = (techStack) =>
   techStack.map((tech) =>
@@ -346,6 +356,68 @@ const projects = [
       'Selenium',
     ]),
   },
+
+  {
+    id: uuidv4(),
+    name: 'HHM on Stock Prediction',
+    desc: 'Research project on developing a Hidden Markov Model for stock price prediction.',
+    images: [HMMImg, HMM1, HMM2, HMM3, HMM4, HMM5, HMM6],
+    github: 'https://github.com/IanQuan/Hidden-Markov-Model-on-Stock-Price-Prediction',
+    other_link: ['Report', HMMReport],
+    problem: "Predicting stock market trends remains a complex challenge due to its inherent volatility and the potential for substantial financial returns. In this project, we used the Hidden Markov Model (HMM) to predict stock prices by representing market dynamics through hidden states. The study's analysis concludes that the prediction results are  elatively accurate, particularly in forecasting the trend of the company's stock fluctuations. However, the variance is significant, indicating a need to incorporate more  ontrol variables and combine different prediction methods to achieve more accurate stock prediction results.", 
+    detail_title: 'Results and Analysis',
+    features: [
+      {
+        heading: 'Dataset and Preprocessing',
+        description: [
+          '- Used historical stock data from Apple, NVIDIA, and Amazon.',
+          '- Preprocessed data using log return calculations and data standardization to stabilize variance.',
+        ],
+      },
+      {
+        heading: 'Optimal Hidden State Selection',
+        description: [
+          '- Determined the optimal number of hidden states using AIC, BIC, HQC, CAIC to balance model complexity and accuracy.',
+          '- 5-6 states was found to be optimal for the selected stocks.',
+        ],
+      },
+      {
+        heading: 'Sliding Window Prediction',
+        description: [
+          '- Employed sliding window approach, with HMMs trained on 96 previous observations to predict the next 96 time step.',
+          '- Ensured adaptability to recent market conditions.',
+        ],
+      },
+      {
+        heading: 'Model Evaluation',
+        description: [
+          '- Evaluated using Mean Absolute Percentage Error (MAPE).',
+          '- Showed reasonable accuracy but some deviations due to market shifts.',
+          '- Captured general trends well but struggled with sudden changes.',
+        ],
+      },
+      {
+        heading: 'Limitations',
+        description: [
+          '- Markov property assumption and stationarity may not hold true in dynamic financial market.',
+          '- Struggled to accurately predict rare, high-impact market events (e.g., crashes or booms) due to their reliance on Gaussian emissions and historical data.'
+        ],
+      },
+      {
+        heading: 'Future Directions',
+        description: [
+          '- Combine HMMs with other techniques like Long Short-Term Memory (LSTM) networks or regime-switching models.',
+          '- Develop methods to dynamically adjust the number of hidden states based on evolving market conditions.',
+        ],
+      },
+    ],
+    techStack: findTechIcons([
+      'Python',
+      'Pandas',
+      'Numpy',
+    ]),
+  },
+
 ];
 
 export default projects;

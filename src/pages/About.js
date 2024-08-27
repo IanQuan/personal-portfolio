@@ -6,7 +6,7 @@ import PText from '../components/PText';
 import Button from '../components/Button';
 import AboutImg from '../assets/images/portrait_sketch.png';
 import ContactBanner from '../components/ContactBanner';
-import Resume from '../assets/reports/Ian_Quan_Resume_combined.pdf';
+import Resume from '../assets/reports/Ian_Quan_Resume.pdf';
 import SkillsSection from '../components/SkillsSection';
 import { skills as allSkills } from '../assets/data/icons';
 

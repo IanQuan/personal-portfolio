@@ -58,7 +58,7 @@ const ProjectSectionStyle = styled.div`
 `;
 
 export default function ProjectsSection() {
-  // console.log(projects);
+  console.log(projects);
   return (
     <ProjectSectionStyle>
       <div className="container">
@@ -84,7 +84,7 @@ export default function ProjectsSection() {
             }}
           > 
             {projects.map((project, index) => {
-              if (index >= 5) return;
+              if (index >= 6) return;
               return (
                 <SwiperSlide key={project.id}>
                   <Link
