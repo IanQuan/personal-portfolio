@@ -217,11 +217,11 @@ export default function About() {
 
               <div className="about__info">
                 <PText>
-                  Hello! I'm Ian, a third-year undergraduate at the University
+                  Hello! I'm Ian, a forth-year undergraduate at the University
                   of Toronto, pursuing a double major in Computer Science and
                   Statistics.
                   <br /> <br />
-                  With a strong foundation in software engineering and Data analysis, 
+                  With a strong foundation in software engineering and Data Science, 
                   I bring over 2 years of experience as a research assistant and data analyst. I'm passionate about applying data science and software engineering skills to solve real-world challenges, always seeking creative and user-centered solutions.
                   <br />
                   <br />In my free time, I love playing basketball and working out, it helps me relieve stress! Another fun fact about me is that I love cooking, and I even cook for my friends regularly as a side hustle!
