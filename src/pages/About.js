@@ -217,14 +217,17 @@ export default function About() {
 
               <div className="about__info">
                 <PText>
-                  Hello! I'm Ian, a forth-year undergraduate at the University
-                  of Toronto, pursuing a double major in Computer Science and
-                  Statistics.
-                  <br /> <br />
-                  With a strong foundation in software engineering and Data Science, 
-                  I bring over 2 years of experience as a research assistant and data analyst. I'm passionate about applying data science and software engineering skills to solve real-world challenges, always seeking creative and user-centered solutions.
-                  <br />
-                  <br />In my free time, I love playing basketball and working out, it helps me relieve stress! Another fun fact about me is that I love cooking, and I even cook for my friends regularly as a side hustle!
+                Hey, I'm Ian! I'm heading into my final year as a Computer Science and Statistics double major at the University of Toronto. My journey into programming began in high school, where I quickly discovered a deep interest in AI and machine learning, which ultimately inspired me to pursue this degree.
+                <br /> <br />
+
+                My passion for software engineering truly blossomed during my internship at 0barrieres, where I had the opportunity to work on projects from scratch. This experience fueled my drive to explore modern development frameworks and build personal projects in my free time. Throughout my undergrad, I embarked on numerous projects, integrating machine learning across diverse fields like linguistics, finance, and even computer vision.
+                <br /> <br />
+
+                And that’s what brings me here today, I am currently an SWE intern at S&P Global — I'm excited to continue exploring new challenges, growing my skills, and pushing the boundaries of what’s possible in the world of technology!
+                <br /> <br />
+
+                I thrive in social settings and love discussing fields I'm passionate about. Feel free to reach out — I’d love to hear your story!
+
                 </PText>
               </div>
               <Button btnText="Resume" btnLink={Resume} type="pdf" />
