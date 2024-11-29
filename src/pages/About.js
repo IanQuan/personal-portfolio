@@ -130,6 +130,7 @@ export default function About() {
         'MongoDB',
         'Sqlite',
         'Postman',
+        'Spring',
       ]),
     },
     {
@@ -169,9 +170,10 @@ export default function About() {
         'Linux',
         'Jira',
         'Latex',
-        'Netlify',
+        'Azure',
         'AWS',
         'Puppeteer',
+        'Salesforce',
       ]),
     },
   ];
@@ -217,7 +219,7 @@ export default function About() {
 
               <div className="about__info">
                 <PText>
-                Hey, I'm Ian! I'm heading into my final year as a Computer Science and Statistics double major at the University of Toronto. My journey into programming began in high school, where I quickly discovered a deep interest in AI and machine learning, which ultimately inspired me to pursue this degree.
+                Hey, I'm Ian! I'm a Computer Science and Statistics double major at the University of Toronto. My journey into programming began in high school, where I quickly discovered a deep interest in AI and machine learning, which ultimately inspired me to pursue this degree.
                 <br /> <br />
 
                 My passion for software engineering truly blossomed during my internship at 0barrieres, where I had the opportunity to work on projects from scratch. This experience fueled my drive to explore modern development frameworks and build personal projects in my free time. Throughout my undergrad, I embarked on numerous projects, integrating machine learning across diverse fields like linguistics, finance, and even computer vision.

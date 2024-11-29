@@ -30,7 +30,7 @@ export default function Contact() {
       variants={pageTransition}
     >
       <ContactSection />
-      <Map />
+      {/* <Map /> */}
     </motion.div>
   );
 }

@@ -190,8 +190,7 @@ export default function HeroSection() {
           </div>
           <div className="hero__info">
             <PText>
-              Welcome to my personal website! Here you can learn more about me
-              and my interests.
+              Welcome to my personal website! Here you can learn more about me!
             </PText>
           </div>
           <div className="hero__social">

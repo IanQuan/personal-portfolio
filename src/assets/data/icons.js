@@ -7,6 +7,11 @@ export const skills = [
           'https://camo.githubusercontent.com/c205ecbe12500177d102169d97bc1c17c545155fdf5ec78c08d54ac53e5b38c1/68747470733a2f2f63646e2e776f726c64766563746f726c6f676f2e636f6d2f6c6f676f732f61646f62652d78642e737667',
       },
       {
+        name: 'Azure',
+        image:
+          'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/azure/azure-original.svg',
+      },
+      {
         name: 'AWS',
         image:
           'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-plain-wordmark.svg',
@@ -224,6 +229,11 @@ export const skills = [
           'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/redux/redux-original.svg',
       },
       {
+        name: 'Salesforce',
+        image:
+          'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/salesforce/salesforce-original.svg',
+      },
+      {
         name: 'Selenium',
         image:
           'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/selenium/selenium-original.svg',
@@ -232,6 +242,11 @@ export const skills = [
         name: 'Scikitlearn',
         image:
           'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/scikitlearn/scikitlearn-original.svg',
+      },
+      {
+        name: 'Spring',
+        image:
+          'https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/spring/spring-original.svg',
       },
       {
         name: 'Sqlite',

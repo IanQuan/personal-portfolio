@@ -81,7 +81,7 @@ export default function AboutSection() {
             heading="About Me"
           />
           <PText>
-            I am a forth-year Computer Science and Statistics major at the
+            I am a Computer Science and Statistics major at the
             University of Toronto. I am currently an SWE intern at S&P Global for Fall 2024.
           </PText>
           <div className="aboutSection__buttons">
