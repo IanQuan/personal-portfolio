@@ -313,12 +313,6 @@ export default function ProjectDetail() {
             <h1 className="tech-stack-title">Tech Stack</h1>
             <TechStack techStack={project.techStack} />
           </div>
-          
-          {project.name === "J2C Translator" && (
-            <p className="apology-notice">
-                I would like to address a mistake I made in this site. I regretfully removed Jacky Fong's name from the final report  without his consent and not giving credit to his contribution on the Multi-Head Attention graph. This was an oversight on my part, and I take full responsibility for this error. I sincerely apologize to Jacky Fong for this mistake and any inconvenience or misunderstanding it may have caused. 
-            </p>
-          )}
         </div>
         <div className="arrowNavigation">
           <ArrowNavigation onPrev={handlePrev} onNext={handleNext} />
